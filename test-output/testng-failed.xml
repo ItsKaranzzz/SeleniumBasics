@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Retry Test]">
+  <listeners>
+    <listener class-name="fundamentals.Retryruntime"/>
+  </listeners>
+  <test name="Test retry twice(failed)">
+    <classes>
+      <class name="fundamentals.RetryTesting">
+        <methods>
+          <include name="test01"/>
+        </methods>
+      </class> <!-- fundamentals.RetryTesting -->
+    </classes>
+  </test> <!-- Test retry twice(failed) -->
+</suite> <!-- Failed suite [Retry Test] -->
