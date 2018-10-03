@@ -1,0 +1,13 @@
+<suite name="Retry Test">
+	<test name="Test retry twice">
+		<listeners>
+			<listener class-name="fundamentals.Retryruntime" />
+
+
+		</listeners>
+
+		<classes>
+			<class name="fundamentals.RetryTesting" />
+		</classes>
+	</test>
+</suite>
