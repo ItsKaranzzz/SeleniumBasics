@@ -1,0 +1,9 @@
+Issues faced till now:
+
+1.Element not visible:  Due to different frames or sometimes AJAX calls
+2.Used JavaScripts for the same
+3.Endless scroll check
+4.authentication pop up
+5.Downloading files
+6.driver not have permission to start execution
+7.multiple browser testing concurrently not yet tried
