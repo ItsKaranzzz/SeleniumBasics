@@ -1,0 +1,59 @@
+There are 8 element locator techniques:
+1.id 			(priority 1)                   Techniques should be used only based on uniqueness
+id="asd"
+
+2.name			(priority 2)
+name="asd"
+
+3.tagname
+button[abc='asd']
+
+4.classname
+classname("asdjask")   //dont use the one with spaces
+		
+5.cssSelector
+cssSelector("button.xyz") for class
+cssSelector("div#pqr")for id/or else
+
+6.linkText
+anchor tag should be there with some text associated with it
+linkText=" adss"
+
+7.partialLinkText
+partialLinkText="ad"
+
+
+8.xpath
+//div/div/a
+
+
+id/css any one is fast up to u
+
+
+All the above techniques are method under By class of Selenium
+
+
+Special Functions 
+
+1. COntains
+//input[contains(@id, 'xyz')]
+
+2. Starts-with
+//input[starts-with(text(), 'pqr')]
+
+3. Following 
+//select[@id='zyx']/following::*
+
+4. Preceding
+//select[@id='zyx']/preceeding::*
+
+5. Following sibling
+//select[@id='zyx']/following-sibling::*
+
+6. Preceding sibling
+//select[@id='zyx']/following-sibling::*
+
+7. Parent
+*//a[text()='asfa']//parent::td[@class='ikwenr']
+//a[@class='confluence-userlink url fn userlink-1' and text()='Jayesh Phatak']//parent::div//parent::div[@class='update-item-content']/a[contains(text(),'GDS - NCPLUS Operations')]
+
