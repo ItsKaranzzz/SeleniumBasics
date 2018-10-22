@@ -1,0 +1,129 @@
+
+
+driver commands/Get Commands:
+
+1.get()     -/URL
+2.getTitle()
+3.getCurrentUrl()
+4.getPageSource()
+5.getWindowHandle()   -/forswitching
+6.getWindowHandles()  -/forswitching multiple windows
+
+get/element commands
+7.getText()
+
+
+
+Navigate Commands
+1.navigate.to()    -/url
+2.navigate.forward() 
+3.navigate.back()
+4.navigate.refresh()
+
+
+driver.close() -current working page
+driver.quit()  -quit the entire application
+
+
+Page Synchronization (Code should be in sync with the WebPage)
+
+1.driver.manage().timeouts().pageLoadTimeout(45,TimeUnit.SECONDS)
+is responsible for synchronization and it'll wait the page load time or hold the 
+page for 45 seconds 
+
+2.driver.manage().timeouts().implicitlyWait(45,TimeUnit.SECONDS)
+it'll hold the execution of every element locator search until it is found within 
+
+
+*the above time is the maximum time until the driver wait for page to load or element to found
+
+0-45seconds wait beyond which code has riights to through the error message(not found)
+
+3.driver.manage().timeouts().setscriptTimeout(45,TimeUnit.SECONDS)
+
+
+
+3.Explicit Wait  --Condition based - not declare on webDriver instance
+until(ExpectedConditions.)
+
+-elementnotclickable
+-elementnotvisible
+-elementnotfound
+-and many more for handling any scenarios
+
+mywait=new WebDriverWait(driver,10);(in seconds)           --condition based until and unless it found the element it 'll wait for only 10 secs
+mywait.unti(ExpectedConditions.functions);
+
+
+Validation Commands:
+-isEnabled     -field
+-isDisplayed   -to check for visibility
+-isSelected    -only for radio buttons/checkboxes
+
+returns true or false
+
+
+ExpectedCOnditions is class
+
+
+Frames:
+
+switchTo().frame(WebElement)
+switchTo().frame("String")  
+switchTo().frame(int)  =>Index
+
+
+Windows()
+
+switchTO().window("")
+getwindowHandle()
+getWindowHandles()
+
+mouse Operations
+
+modifier key (ctrl+ALt+shift)
+
+Actions class is used for all the mouse functions etc
+it is also use to hover on any element
+
+
+ctrl+shift+f for formating the scripts
+ series of actions are build and performed
+
+
+
+SCREENSHOTS
+
+TakeScreenshot <Interface> screenshot
+getScreenShotAs
+
+
+
+Strings required:
+screenshot path required,
+tempfile, permanent file
+
+permanentFile=new File(imagepath);
+if(permanentFile.exists()){
+throw new Exception("File exists");
+//surround by try catch
+screenshot =(TakeScreenshot)driver;  /type casting
+tempFile=screensShot.getscreenshotAs(OutputType.File);
+FileUtils.copyFile(source, destincation);  //temp to permanent
+
+
+Scroll
+
+JavascripExecutor jse;  <Interface>
+Way 1:
+jse=(JavascriptExecutor)driver;
+jse.executeScript("scroll(0,800)");
+
+jse.executescript(webelement);
+int x=element.getlocation().x;
+Way 2:
+String command=String.format("window.scrollTo(%d,%d)",x,y)
+jse.executeScript(command);
+
+Way 3:
+jse.executeScript("argument[0].scrollIntoView()",webelement);

@@ -1,0 +1,49 @@
+Retry Logic
+
+Using testNG we can define in two forms:
+
+- @Test level           ~Depends on project 
+- Runtime check         ~Better approach 
+ 
+1.
+For @Test level:
+
+Interface : IRetryAnalyzer  
+
+Logic:
+
+retry method
+ITestResult parameter
+return boolean
+
+In this we override retry method from IRetryAnalyzer
+which use ITestResult as a parameter and return boolean
+
+Called from particular test as
+
+@Test(retryAnalyzer=package.RetyLogic.class)
+
+
+2. 
+
+For Runtime:
+
+Interface: IAnnotationTransformer
+transform method 
+(ItestAnnotation, Class, Constructor, Method) as parameters
+
+annotation.setRetryAnalyzer(RetryLogic.class);
+
+
+Finally update the testNG xml accordingly
+
+<suite name="xyz">
+<listeners>
+<listener class-name="package.MyTransformer"/>
+</listeners>
+
+<test name="sdfs">
+<classses>
+<class name=""/>
+<classes>
+

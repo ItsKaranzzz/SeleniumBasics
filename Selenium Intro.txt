@@ -1,0 +1,59 @@
+1. Selenium Core
+
+	A javaSCript program created by "Jason Huggins"
+	It was named as "JavaSCriptTestRunner" which works for a browser
+	Works using the Single host/ Same Origin Policy - ex. same domain(i.e, google.com will not work for yahoo.com) 
+
+
+2. Selenium Remote Control/Selenium 1
+	To avoid same origin policy, proxy injection method is used
+	Since it has a server in between the Browser(having Selenium Core) and the user it used to take a long time to
+	run any javascript for any operation on the browser
+
+
+3. Selenium 2
+	Contains the Selenium 1 setup + WebDriver
+	WebDriver have the capability to run any browser level commands from the OS itself which reduce lot of script execution time
+
+4. Selenium 3
+	Combination of:
+		WebDriver
+		Selenium IDE
+		Selenium Grid
+In this earlier we use to have the firefox driver by default but in this version we need to download the gekco driver to continue using firefox driver
+
+
+IDE basically a prototyping tool works using selenese commands, so have certain drawbacks
+In IDE we have various locator techniques such as : Link, xpath, name, etc which are used by IDE commands
+We can export the test case in various languages or formats (java, testng, etc)
+learning selenium scritps syntax
+Actions are limited in a IDE/Plugin
+
+Selenium RC
+command > WebDriver > Browser
+script > application under test
+
+WebDriver uses: 
+1. Cross Browser testing(IE, Chrome)
+2. Supports different language scripting
+3. Supports different OS
+4. Easy Framework (support OOPS)
+5. Parallel Testing (multiple browser at the same time)
+
+
+Selenium Grid 
+	Mainly used for parallel and distributive testing. execute different test scripts on different machines:
+	1. Parallel execution (we use TestNG for this)
+	2. Platform independent
+	3. Language Independent
+	4. Browser Independent
+	5. Fast Execution
+Parent sys(Hub) only config required.
+
+Can everythin be automated?
+There are below such cases where it is not feasible:
+-Dynamic application
+-Very Tight Deadline
+-not every UI component is allowed to be automated
+
+

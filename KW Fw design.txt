@@ -1,0 +1,38 @@
+FrameWork Design 
+
+
+1.Excel Util:
+
+	a. create variables required
+	b. nullify all the variables
+	c. create a workbook
+	d. open a workbook
+	e. create a sheet
+	f. row count
+	g. get cell count
+	h. get cell data
+	i. set cell data
+	j. save
+	k. save as
+	l. close
+
+2. CommonUtils:
+	a. getproperties
+	b. getDate
+	c. getlocators (using split string array)
+	d. wait
+
+3. CommonDriver (Implementation of keywords)
+
+	a. timeouts handling
+	b. different functions (click, waits, select, get, send)
+	c. getDriver
+
+4. Keyword Util
+
+	a. calling driver from commonDriver
+	b. performActions
+	c. even we can created new actions by just calling the getdriver function implemented in CommonDriver
+
+
+	
